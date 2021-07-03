@@ -91,12 +91,8 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  let newArray=arr;
-for (let i =0 ; i<=arr.length;i++){
-  newArray.push(value)
-}
-return newArray
-}; console.log(addValues([],8))
+  arr.push(value)
+}; 
 
 const addNumbers = (num, arr, times, callback) => {
   let newArray =[];
