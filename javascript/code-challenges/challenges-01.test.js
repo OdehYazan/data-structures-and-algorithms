@@ -95,11 +95,11 @@ const addValues = (arr, value) => {
 }; 
 
 const addNumbers = (num, arr, times, callback) => {
-  let newArray =[];
+  
   for (let i=1;i<=times;i++){
-    newArray.push(callback(arr,num))
+    callback(arr,num)
   }
-  return newArray
+  return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
