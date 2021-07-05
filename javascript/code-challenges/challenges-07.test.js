@@ -27,9 +27,9 @@ let starWarsPeople = [
 const sortStarWarsCharacters = (starWarsArr) => {
 
  let newArray= starWarsArr.sort((a,b) = () =>{
-    
-    return parseInt(b.height, 10) - parseInt(a.height, 10)
-      
+    let x =parseInt(b.height, 10);
+    let y=parseInt(a.height, 10)
+    return y-x
     })
     return newArray
   }
