@@ -84,6 +84,7 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
 
+
   let array= [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   for (let i = 0; i < stores.length; i++) {
     for (let j = 0; j < stores[i].length; j++) {
@@ -91,6 +92,7 @@ const grandTotal = (stores) => {
     }
   }
   return array;
+
 
 
 };
