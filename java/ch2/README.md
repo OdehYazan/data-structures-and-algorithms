@@ -4,9 +4,9 @@
 
 ## Whiteboard Process
 
-![ch1](/img/ch2.png)
+![ch1](../img/ch2.png)
 
 ## Approach & Efficiency
 
-time was the length of the arr+1
-space arr.length+1 because of the new array
+**time was the length of the arr+1**
+**space (arr.length+1)** **because of** **the new array.**
