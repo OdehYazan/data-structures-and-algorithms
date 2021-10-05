@@ -3,24 +3,40 @@
  */
 package ch5;
 
+
 import ch5.structure.LinkedList;
 
 public class Main {
 
   public static void main(String[] args) {
+      LinkedList fun = new LinkedList();
 
-    LinkedList linkedList = new LinkedList();
+    LinkedList linkedList1 = new LinkedList();
 
-    linkedList.insert("Y");
-    linkedList.insert("A");
-    linkedList.insert("Z");
-    linkedList.insert("A");
-    linkedList.insert("N");
+    linkedList1.insert("Y");
+    linkedList1.insert("A");
+    linkedList1.insert("Z");
+    linkedList1.insert("A");
+    linkedList1.insert("N");
 
-    linkedList.stringOutput();
+    LinkedList linkedList2 = new LinkedList();
+    linkedList2.insert("Y");
+    linkedList2.insert("A");
+    linkedList2.insert("Z");
+    linkedList2.insert("A");
+    linkedList2.insert("N");
 
-    System.out.println("******** "+linkedList.includes("A")+" **********");
+
+    System.out.println(linkedList1.stringOutput());
+
+    System.out.println("******** "+linkedList1.includes("A")+" **********");
+
+    System.out.println(linkedList2.stringOutput());
+
+    fun.head=fun.join(linkedList1,linkedList2);
+    System.out.println(fun.stringOutput());
   }
+
 
 }
 

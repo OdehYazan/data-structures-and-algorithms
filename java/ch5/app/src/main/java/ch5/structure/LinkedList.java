@@ -49,25 +49,57 @@ public class LinkedList {
         }
 
 
+  public LinkedListNode join(LinkedList a, LinkedList b )
+  {
+    LinkedListNode a_curr = a.head, b_Curr = b.head;
+    LinkedListNode a_next, b_next;
 
-  public void stringOutput() {
 
+
+    while (a_curr != null && b_Curr != null) {
+
+
+
+      a_next = a_curr.getNext();
+
+      b_next = b_Curr.getNext();
+
+
+      b_Curr.setNext(a_next);
+      a_curr.setNext(b_Curr);
+
+
+      a_curr = a_next;
+      b_Curr = b_next;
+    }
+     b.head = b_Curr;
+    return a.head;
+
+  }
+
+
+
+
+
+  public String stringOutput() {
+
+      String output="";
       if (head == null) {
-        System.out.println("List is empty");
+        return "List is empty";
       } else {
         LinkedListNode current;
         current = head;
 
 
-        System.out.print("HEAD -> ");
+
 
         while (current != null) {
 
-          System.out.print("{"+current.getData()+"}" + " -> ");
+          output+="{"+current.getData()+"}" + " -> ";
           current = current.getNext();
         }
 
-        System.out.println("NULL");
+        return "HEAD -> "+output+ "NULL";
       }
     }
 
