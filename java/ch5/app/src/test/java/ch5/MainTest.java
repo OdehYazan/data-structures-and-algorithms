@@ -8,24 +8,49 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
-    @Test void testJoin() {
-      LinkedList fun = new LinkedList();
-      LinkedList linkedList1 = new LinkedList();
+  @Test
+  public void testAppend() {
+    LinkedList linkedList1 = new LinkedList();
 
-      linkedList1.insert("Y");
-      linkedList1.insert("A");
-      linkedList1.insert("Z");
-      linkedList1.insert("A");
-      linkedList1.insert("N");
+    linkedList1.add("Y");
+    linkedList1.add("A");
+    linkedList1.add("Z");
+    linkedList1.add("A");
+    linkedList1.add("N");
+    linkedList1.append("O");
+    linkedList1.append("D");
 
-      LinkedList linkedList2 = new LinkedList();
-      linkedList2.insert("Y");
-      linkedList2.insert("A");
-      linkedList2.insert("Z");
-      linkedList2.insert("A");
-      linkedList2.insert("N");
-fun.head=fun.join(linkedList1,linkedList2);
 
-        assertEquals("HEAD -> {Y} -> {Y} -> {A} -> {A} -> {Z} -> {Z} -> {A} -> {A} -> {N} -> {N} -> NULL", fun.stringOutput());
-    }
-}
+    assertEquals("HEAD -> {Y} -> {A} -> {Z} -> {A} -> {N} -> {O} -> {D} -> NULL",linkedList1.stringOutput());
+
+  }
+  @Test
+  public void testInsertBefore() {
+    LinkedList linkedList1 = new LinkedList();
+
+    linkedList1.add("Y");
+    linkedList1.add("A");
+    linkedList1.add("Z");
+    linkedList1.add("A");
+    linkedList1.add("N");
+    linkedList1.insertBefore("N", "K");
+    assertEquals("HEAD -> {Y} -> {A} -> {Z} -> {A} -> {K} -> {N} -> NULL", linkedList1.stringOutput());
+
+  }
+  @Test
+  public void testInsertAfter() {
+    LinkedList linkedList1 = new LinkedList();
+
+    linkedList1.add("Y");
+    linkedList1.add("A");
+    linkedList1.add("Z");
+    linkedList1.add("A");
+    linkedList1.add("N");
+    linkedList1.insertAfter("Z", "K");
+    assertEquals("HEAD -> {Y} -> {A} -> {Z} -> {K} -> {A} -> {N} -> NULL", linkedList1.stringOutput());
+    linkedList1.insertAfter("N", "N");
+    assertEquals("HEAD -> {Y} -> {A} -> {Z} -> {K} -> {A} -> {N} -> {N} -> NULL", linkedList1.stringOutput());
+
+
+  }
+  }
