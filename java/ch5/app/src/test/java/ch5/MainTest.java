@@ -3,12 +3,29 @@
  */
 package ch5;
 
+import ch5.data.LinkedListNode;
+import ch5.structure.LinkedList;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
-    @Test void appHasAGreeting() {
-        Main classUnderTest = new Main();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+    @Test void testLinkedList() {
+      LinkedList linkedList = new LinkedList();
+
+
+      linkedList.insert("Y");
+      assertEquals("HEAD -> {Y} -> NULL",linkedList.stringOutput());
+      linkedList.insert("A");
+
+      assertEquals("HEAD -> {A} -> {Y} -> NULL",linkedList.stringOutput());
+      linkedList.insert("Z");
+      linkedList.insert("A");
+      linkedList.insert("N");
+
+      assertEquals(true,linkedList.includes("A"));
+      assertEquals(false,linkedList.includes("D"));
+
+      assertEquals("HEAD -> {N} -> {A} -> {Z} -> {A} -> {Y} -> NULL",linkedList.stringOutput());
     }
 }

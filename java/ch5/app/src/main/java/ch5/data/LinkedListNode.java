@@ -11,6 +11,10 @@ public class LinkedListNode {
 
     }
 
+  public LinkedListNode() {
+
+  }
+
   public String getData() {
     return data;
   }

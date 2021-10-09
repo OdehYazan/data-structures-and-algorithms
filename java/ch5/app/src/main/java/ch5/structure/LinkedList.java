@@ -11,24 +11,15 @@ public class LinkedList {
     public LinkedList() {
     }
 
-    public void insert(String data) {
-      if (head == null) {
-        LinkedListNode node = new LinkedListNode(data);
-        head = node;
-      } else {
-        // else traverse the list and get to the end
-        // make last node point to the new node
-        LinkedListNode current;
-        current = head;
-        while (current.getNext() != null) {
-          // moves the current reference along the list
-          current = current.getNext();
-        }
+    public String insert(String data) {
+      LinkedListNode node = new LinkedListNode(data);
+      if (head != null) {
 
-        LinkedListNode node = new LinkedListNode( data);
-        current.setNext(node);
+        node.setNext(head);
 
       }
+      head = node;
+      return data;
     }
 
 
@@ -50,26 +41,28 @@ public class LinkedList {
 
 
 
-  public void stringOutput() {
+  public String stringOutput() {
 
-      if (head == null) {
-        System.out.println("List is empty");
-      } else {
-        LinkedListNode current;
-        current = head;
+    String output="";
+    if (head == null) {
+      return "List is empty";
+    } else {
+      LinkedListNode current;
+      current = head;
 
 
-        System.out.print("HEAD -> ");
 
-        while (current != null) {
 
-          System.out.print("{"+current.getData()+"}" + " -> ");
-          current = current.getNext();
-        }
+      while (current != null) {
 
-        System.out.println("NULL");
+        output+="{"+current.getData()+"}" + " -> ";
+        current = current.getNext();
       }
-    }
 
+      return "HEAD -> "+output+ "NULL";
+    }
   }
+
+
+}
 
