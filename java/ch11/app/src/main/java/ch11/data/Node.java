@@ -1,7 +1,7 @@
 package ch11.data;
 
 
-  public class Node {
+  public class  Node  {
     String data;
     Node next;
 

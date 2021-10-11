@@ -3,6 +3,8 @@
  */
 package ch11;
 
+import ch11.animal.structure.Animal;
+import ch11.animal.structure.AnimalShelter;
 import ch11.queue.structure.Queue;
 import ch11.stack.strucrure.Stack;
 
@@ -14,14 +16,16 @@ public class Main {
 //    System.out.println("-------------------------<<QUEUE>>-------------------------------");
 //    queue();
 //    System.out.println("------------------------------------------------------------");
-    PseudoQueue pseudoQueue=new PseudoQueue();
-    pseudoQueue.enqueue("A");
-    pseudoQueue.enqueue("B");
 
+    AnimalShelter animalShelter =new AnimalShelter();
+    animalShelter.enqueue("first");
+    animalShelter.enqueue("dog");
+    animalShelter.enqueue("cat");
+    animalShelter.enqueue("last");
+    System.out.println(animalShelter.dequeue("cat"));
+    System.out.println(animalShelter.dequeue("cat"));
 
-//    pseudoQueue.dequeue();
-    System.out.println(pseudoQueue);
-
+    System.out.println(animalShelter.peek());
   }
 
 
