@@ -10,7 +10,8 @@
 **1. Arguments: none**<br>
 **2. Extracts a value from the PseudoQueue, using a first-in, first-out approach.**<br>
 ## Whiteboard Process
+![ch11](../img/ch11.png)
+https://1drv.ms/u/s!Ameo_3rwOz5MhUaIppitMI_y-C90?e=7kwies
 
 
-## Approach & Efficiency
-<!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
+
