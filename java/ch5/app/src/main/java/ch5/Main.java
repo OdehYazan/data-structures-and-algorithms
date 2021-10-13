@@ -13,11 +13,11 @@ public class Main {
 
     LinkedList linkedList1 = new LinkedList();
 
-    linkedList1.insert("Y");
-    linkedList1.insert("A");
-    linkedList1.insert("Z");
-    linkedList1.insert("A");
-    linkedList1.insert("N");
+    linkedList1.add("Y");
+    linkedList1.add("A");
+//    linkedList1.add("Z");
+//    linkedList1.add("A");
+//    linkedList1.add("N");
 
     LinkedList linkedList2 = new LinkedList();
     linkedList2.insert("Y");
@@ -28,13 +28,14 @@ public class Main {
 
 
     System.out.println(linkedList1.stringOutput());
+    System.out.println(linkedList1.kthFromEnd(2));
 
-    System.out.println("******** "+linkedList1.includes("A")+" **********");
-
-    System.out.println(linkedList2.stringOutput());
-
-    fun.head=fun.join(linkedList1,linkedList2);
-    System.out.println(fun.stringOutput());
+//    System.out.println("******** "+linkedList1.includes("A")+" **********");
+//
+//    System.out.println(linkedList2.stringOutput());
+//
+//    fun.head=fun.join(linkedList1,linkedList2);
+//    System.out.println(fun.stringOutput());
   }
 
 
