@@ -4,17 +4,17 @@ package ch11.animal.structure;
 import ch11.animal.data.AnimalNode;
 
 public class AnimalShelter {
-  // Instance properties
+
   private AnimalNode front;
   private AnimalNode rear;
 
-  // Constructor
+
   public AnimalShelter() {
     this.front = null;
     this.rear = null;
   }
 
-  // Adds a new node with the specified value to the back of the queue with an O(1) Time performance
+
   public void enqueue(Object value) {
     AnimalNode newNode = new AnimalNode(value);
     if (front == null) {
@@ -26,7 +26,7 @@ public class AnimalShelter {
     }
   }
 
-  // Removes the node from the front of the queue, and returns that node's value
+
   public Object dequeue(String animalType) {
     AnimalNode previous = front;
     AnimalNode current = front;
@@ -46,8 +46,38 @@ public class AnimalShelter {
     }
   }
 
+//  public Object dequeue(String animalType) {
+//    AnimalNode previous = front;
+//    AnimalNode current = front;
+//    while (current != null) {
+//      if (current.getData().toString() == animalType) {
+//
+//        if (current == previous && current.getNext() == null) {
+//          front = null;
+//          rear = null;
+//
+//        } else if (current == previous && current.getNext() != null) {
+//          front = front.getNext();
+//          // Points rear to the previous node if the last node is being removed
+//        } else if (current == rear) {
+//          rear = previous;
+//        }
+//        if (current != previous) {
+//          previous.setNext(previous.getNext().getNext());
+//        }
+//        return current.getData();
+//      }
+//
+//      if (previous != current) {
+//        previous = previous.getNext();
+//      }
+//      current = current.getNext();
+//    }
+//    return null;
+//  }
+
     public Object peek() {
-      return this.front != null ? this.front.getData() : null;
+      return front != null ? front.getData() : null;
     }
 
   }
