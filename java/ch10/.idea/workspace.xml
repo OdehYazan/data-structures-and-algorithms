@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9667e82f-c1b2-4aac-b0d9-6446ba25aca6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ch11/app/src/main/java/ch11/data/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ch11/app/src/main/java/ch11/queue/data/QueueNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ch11/app/src/main/java/ch11/queue/structure/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ch11/app/src/main/java/ch11/stack/data/StackNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ch11/app/src/main/java/ch11/stack/strucrure/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/ch14/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch11/app/src/main/java/ch11/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ch11/app/src/main/java/ch11/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch11/app/src/test/java/ch11/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ch11/app/src/test/java/ch11/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/ch10/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/ch10/data/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/ch10/queue/data/QueueNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/ch10/queue/structure/Queue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/ch10/stack/data/StackNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/ch10/stack/strucrure/Stack.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../.." value="stack-queue-animal-shelter" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1zH28bGdhkHaUXst0K3UN7AqoF0" />
@@ -217,16 +223,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lib/src/main/java/ch10/Main.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
