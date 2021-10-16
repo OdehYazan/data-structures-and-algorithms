@@ -16,26 +16,19 @@ package trees;
       binarySearchTree.insert(5);
 
 
-      BinarySearchTree<String> jason = new BinarySearchTree<>();
-      jason.insert("J");
-      jason.insert("J");
-      jason.insert("A");
-      jason.insert("S");
-      jason.insert("O");
-      jason.insert("N");
-
-//        System.out.println("Inorder traversal");
-//        binarySearchTree.inorderTraversal();
 
 
-      System.out.println("Inorder traversal of Jason");
+
+
+      System.out.println("Inorder");
       binarySearchTree.inorderTraversal();
-//      System.out.println("preorder");
-//      binarySearchTree.preorderTraversal();
-      System.out.println("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+
+      System.out.println("\nxxxxxxxxxxxxxxxx Preorder xxxxxxxxxxxxxxxxx");
       binarySearchTree.preorderTraversal();
-      System.out.println("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+      System.out.println("\nxxxxxxxxxxxxxxxx Postorder rxxxxxxxxxxxxxxxxx");
       binarySearchTree.postorderTraversal();
+      System.out.println("\n");
+      System.out.println(binarySearchTree.contains(10));
 
     }
   }

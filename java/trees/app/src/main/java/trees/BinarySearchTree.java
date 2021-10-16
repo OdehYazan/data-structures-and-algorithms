@@ -76,6 +76,24 @@ public class BinarySearchTree<T extends Comparable<T>> {
     System.out.printf( node.getData() +" -> ");
   }
 
+  public boolean contains( T data )
+  {
+    return contains( data, root );
+  }
+
+  private boolean contains( T data, Node<T> node )
+  {
+    if( node == null )
+      return false;
+    int searchResult = data.compareTo( node.getData() );
+    if( searchResult < 0 )
+      return contains( data, node.getLeftNode() );
+    else if( searchResult > 0 )
+      return contains( data, node.getRightNode() );
+    else
+      return true; // Match
+  }
+
 
 
   private void insertHelper(T data, Node<T> root) {

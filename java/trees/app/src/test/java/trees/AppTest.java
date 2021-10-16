@@ -7,8 +7,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        Main classUnderTest = new Main();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test void testPreorder() {
+      BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+      binarySearchTree.insert(7);
+      binarySearchTree.insert(3);
+      binarySearchTree.insert(2);
+      binarySearchTree.insert(4);
+      binarySearchTree.insert(6);
+      binarySearchTree.insert(5);
+
+//      assertEquals("7 -> 3 -> 2 -> 4 -> 6 -> 5 ->",binarySearchTree.preorderTraversal());
+
     }
 }
