@@ -17,15 +17,16 @@ public class Main {
 //    queue();
 //    System.out.println("------------------------------------------------------------");
 
-    AnimalShelter animalShelter =new AnimalShelter();
-    animalShelter.enqueue("first");
-    animalShelter.enqueue("dog");
-    animalShelter.enqueue("cat");
-    animalShelter.enqueue("last");
-    System.out.println(animalShelter.dequeue("cat"));
-    System.out.println(animalShelter.dequeue("dog"));
-
-    System.out.println(animalShelter.peek());
+//    AnimalShelter animalShelter =new AnimalShelter();
+//    animalShelter.enqueue("first");
+//    animalShelter.enqueue("dog");
+//    animalShelter.enqueue("cat");
+//    animalShelter.enqueue("last");
+//    System.out.println(animalShelter.dequeue("cat"));
+//    System.out.println(animalShelter.dequeue("dog"));
+//
+//    System.out.println(animalShelter.peek());
+  
   }
 
 
@@ -81,4 +82,6 @@ public class Main {
 
 
   }
+
+
 }

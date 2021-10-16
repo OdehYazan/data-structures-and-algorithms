@@ -4,46 +4,46 @@ import ch11.data.Node;
 import ch11.stack.data.StackNode;
 
 
-public class Stack {
+public class Stack<T> {
 
-  private Node top;
+  private Node<T> top;
 
   public Stack() {
   }
 
-  public String push(String data) {
+  public T push(T data) {
 
     // PUSH (add) use top stack as reference
 
     if (isEmpty()) {
-      Node node = new StackNode(data);
+      Node<T> node = new StackNode<>(data);
       top = node;
     } else {
-      Node node = new StackNode(data);
+      Node<T> node = new StackNode<>(data);
       node.setNext(top);
       top = node;
     }
     return data;
   }
 
-  public String pop() {
+  public T pop() {
 
     // POP (remove) using stack top reference
 
     if (isEmpty()) {
-      return "The stack is empty";
+      return (T)"The stack is empty";
     } else {
-      String data = top.getData();
+      T data = top.getData();
       top = top.getNext();
       return data;
     }
   }
 
-  public String peek() {
+  public T peek() {
 
     //PEEK look to the top node of the stack
     if (isEmpty()) {
-      return "The stack is empty";
+      return (T)"The stack is empty";
     } else {
       return top.getData();
     }
@@ -52,4 +52,6 @@ public class Stack {
   public boolean isEmpty() {
     return top == null;
   }
+
+
 }

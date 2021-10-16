@@ -1,9 +1,11 @@
 package ch11.stack.data;
 
+
 import ch11.data.Node;
 
-public class StackNode extends Node {
-  public StackNode(String data) {
+public class StackNode<T>extends Node<T> {
+
+  public StackNode(T data) {
     super(data);
   }
 }

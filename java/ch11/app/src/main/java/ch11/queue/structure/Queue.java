@@ -2,44 +2,44 @@ package ch11.queue.structure;
 
 import ch11.data.Node;
 
-public class Queue {
-  private Node front;
-  private Node rear;
+public class Queue<T> {
+  private Node<T> front;
+  private Node<T> rear;
 
   public Queue() {
   }
 
-  public String enqueue(String data) {
+  public T enqueue(T data) {
 
     // we add to end of the queue using the rear(last node reference)
 
     if (isEmpty()) {
-      Node node = new Node(data);
+      Node<T> node = new Node<>(data);
       front = node;
       rear = node;
     } else {
-      Node node = new Node(data);
+      Node<T> node = new Node<>(data);
       rear.setNext(node);
       rear = node;
     }
     return data;
   }
 
-  public String dequeue() {
+  public T dequeue() {
 
     // remove from the first of the queue using front
     if (isEmpty()) {
-      return "Queue is empty";
+      return (T) "Queue is empty";
     } else {
-      String data = front.getData();
+      T data = front.getData();
       front = front.getNext();
       return data;
     }
   }
 
-  public String peek() {
+  public T peek() {
     if (isEmpty()) {
-      return "The Queue is empty";
+      return (T)"The Queue is empty";
     } else
       return front.getData();
   }
