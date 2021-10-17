@@ -7,10 +7,10 @@ package trees;
   public class Main {
 
     public static void main(String[] args) {
-      BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+      trees.BinarySearchTree<Integer> binarySearchTree = new trees.BinarySearchTree<>();
       binarySearchTree.insert(7);
       binarySearchTree.insert(3);
-      binarySearchTree.insert(2);
+      binarySearchTree.insert(10);
       binarySearchTree.insert(4);
       binarySearchTree.insert(6);
       binarySearchTree.insert(5);
@@ -29,6 +29,7 @@ package trees;
       binarySearchTree.postorderTraversal();
       System.out.println("\n");
       System.out.println(binarySearchTree.contains(10));
+      System.out.println(binarySearchTree.maxData());
 
     }
   }

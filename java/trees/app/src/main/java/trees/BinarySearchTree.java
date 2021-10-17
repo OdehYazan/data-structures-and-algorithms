@@ -1,17 +1,14 @@
 package trees;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class BinarySearchTree<T extends Comparable<T>> {
 
-  private Node<T> root;
-  private Node<T> leftNode;
-  private Node<T> rightNode;
+  private trees.Node<T> root;
+  private trees.Node<T> leftNode;
+  private trees.Node<T> rightNode;
 
   public void insert(T data) {
     if (isEmpty()) { // tree empty
-      root = new Node<>(data);
+      root = new trees.Node<>(data);
     } else {
       insertHelper(data, root);
     }
@@ -47,7 +44,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     preOrder(root);
   }
-  public void preOrder( Node<T> node) {
+  public void preOrder( trees.Node<T> node) {
     if (node == null) {
       return;
     }
@@ -65,7 +62,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     postOrder(root);
   }
-  public void postOrder( Node<T> node) {
+  public void postOrder( trees.Node<T> node) {
     if (node == null) {
       return;
     }
@@ -81,7 +78,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
     return contains( data, root );
   }
 
-  private boolean contains( T data, Node<T> node )
+  private boolean contains( T data, trees.Node<T> node )
   {
     if( node == null )
       return false;
@@ -96,8 +93,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
 
 
-  private void insertHelper(T data, Node<T> root) {
-    Node<T> node = new Node<>(data);
+
+  private void insertHelper(T data, trees.Node<T> root) {
+    trees.Node<T> node = new trees.Node<>(data);
     if (data.compareTo(root.getData()) < 0) {
       if (root.getLeftNode() == null) {
         root.setLeftNode(node);
@@ -113,7 +111,21 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
   }
 
+  public T maxData() {
+    if (isEmpty()) {
+      return (T)"tree is empty ";
+    }
 
+    return getMax(root);
+  }
+
+  public T getMax( trees.Node<T> root) {
+    if (root.getRightNode() != null) {
+    return getMax(root.getRightNode());
+
+    }
+   return root.getData();
+  }
 
 
 

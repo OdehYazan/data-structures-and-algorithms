@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test void testPreorder() {
-      BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+      trees.BinarySearchTree<Integer> binarySearchTree = new trees.BinarySearchTree<>();
       binarySearchTree.insert(7);
       binarySearchTree.insert(3);
       binarySearchTree.insert(2);
@@ -19,4 +19,14 @@ class AppTest {
 //      assertEquals("7 -> 3 -> 2 -> 4 -> 6 -> 5 ->",binarySearchTree.preorderTraversal());
 
     }
+  @Test void testGetMax(){
+    trees.BinarySearchTree<Integer> binarySearchTree = new trees.BinarySearchTree<>();
+    binarySearchTree.insert(7);
+    binarySearchTree.insert(3);
+    binarySearchTree.insert(10);
+    binarySearchTree.insert(4);
+    binarySearchTree.insert(6);
+    binarySearchTree.insert(5);
+      assertEquals(10,binarySearchTree.maxData());
+  }
 }
