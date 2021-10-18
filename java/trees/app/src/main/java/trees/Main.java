@@ -7,13 +7,13 @@ package trees;
   public class Main {
 
     public static void main(String[] args) {
-      BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
-      binarySearchTree.insert(7);
-      binarySearchTree.insert(3);
-      binarySearchTree.insert(2);
-      binarySearchTree.insert(4);
-      binarySearchTree.insert(6);
-      binarySearchTree.insert(5);
+      BinaryTree<Integer> binaryTree = new BinaryTree<>();
+      binaryTree.insert(7);
+      binaryTree.insert(3);
+      binaryTree.insert(2);
+      binaryTree.insert(4);
+      binaryTree.insert(6);
+      binaryTree.insert(5);
 
 
 
@@ -21,14 +21,14 @@ package trees;
 
 
       System.out.println("Inorder");
-      binarySearchTree.inorderTraversal();
+      binaryTree.inorderTraversal();
 
       System.out.println("\nxxxxxxxxxxxxxxxx Preorder xxxxxxxxxxxxxxxxx");
-      binarySearchTree.preorderTraversal();
+      binaryTree.preorderTraversal();
       System.out.println("\nxxxxxxxxxxxxxxxx Postorder rxxxxxxxxxxxxxxxxx");
-      binarySearchTree.postorderTraversal();
+      binaryTree.postorderTraversal();
       System.out.println("\n");
-      System.out.println(binarySearchTree.contains(10));
+      System.out.println(binaryTree.contains(10));
 
     }
   }

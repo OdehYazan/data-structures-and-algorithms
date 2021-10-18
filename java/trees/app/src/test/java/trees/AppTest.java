@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test void testPreorder() {
-      BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+      BinaryTree<Integer> binarySearchTree = new BinaryTree<>();
       binarySearchTree.insert(7);
       binarySearchTree.insert(3);
       binarySearchTree.insert(2);
