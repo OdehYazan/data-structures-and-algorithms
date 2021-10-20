@@ -1,8 +1,9 @@
 package trees;
 
-public class BinaryTree <T extends Comparable<T>> extends BinarySearchTree{
+import queue.data.QueueNode;
+import queue.queue.Queue;
 
-
+public class BinaryTree<T extends Comparable<T>> extends BinarySearchTree {
 
 
   @Override
@@ -39,12 +40,13 @@ public class BinaryTree <T extends Comparable<T>> extends BinarySearchTree{
 
     preOrder(getRoot());
   }
-  public void preOrder( Node<T> node) {
+
+  public void preOrder(Node<T> node) {
     if (node == null) {
       return;
     }
 
-    System.out.printf( node.getData() +" -> ");
+    System.out.printf(node.getData() + " -> ");
     preOrder(node.getLeftNode());
     preOrder(node.getRightNode());
   }
@@ -56,7 +58,8 @@ public class BinaryTree <T extends Comparable<T>> extends BinarySearchTree{
 
     postOrder(getRoot());
   }
-  public void postOrder( Node<T> node) {
+
+  public void postOrder(Node<T> node) {
     if (node == null) {
       return;
     }
@@ -64,6 +67,40 @@ public class BinaryTree <T extends Comparable<T>> extends BinarySearchTree{
 
     postOrder(node.getLeftNode());
     postOrder(node.getRightNode());
-    System.out.printf( node.getData() +" -> ");
+    System.out.printf(node.getData() + " -> ");
   }
+
+
+//  public void breadthFirst() {
+//    if (isEmpty()) {
+//      return;
+//    }
+//
+//    breadth(getRoot());
+//  }
+//
+//  public void breadth(Node<T> node) {
+//    if (node == null) {
+//      return;
+//    }
+//    System.out.printf(node.getData() + " -> ");
+//
+//    if (node.getLeftNode() != null) {
+//      System.out.println(node.getLeftNode().getData()+ " -> ");
+//    }
+//
+//    if (node.getRightNode() != null) {
+//      System.out.println(node.getRightNode().getData()+ " -> ");
+//    }
+//
+//  }
+//public void breadth() {
+//  if (isEmpty()) {
+//    return;
+//  }
+//
+//  breadthFirst(getRoot());
+//}
+
+
 }

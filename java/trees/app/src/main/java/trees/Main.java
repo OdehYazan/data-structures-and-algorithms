@@ -8,27 +8,28 @@ package trees;
 
     public static void main(String[] args) {
       BinaryTree<Integer> binaryTree = new BinaryTree<>();
-      binaryTree.insert(7);
-      binaryTree.insert(3);
       binaryTree.insert(2);
-      binaryTree.insert(4);
-      binaryTree.insert(6);
+      binaryTree.insert(7);
       binaryTree.insert(5);
+      binaryTree.insert(2);
+      binaryTree.insert(6);
+      binaryTree.insert(1);
 
 
 
 
 
 
-      System.out.println("Inorder");
-      binaryTree.inorderTraversal();
-
-      System.out.println("\nxxxxxxxxxxxxxxxx Preorder xxxxxxxxxxxxxxxxx");
-      binaryTree.preorderTraversal();
-      System.out.println("\nxxxxxxxxxxxxxxxx Postorder rxxxxxxxxxxxxxxxxx");
-      binaryTree.postorderTraversal();
-      System.out.println("\n");
-      System.out.println(binaryTree.contains(10));
+//      System.out.println("Inorder");
+//      binaryTree.inorderTraversal();
+//
+//      System.out.println("\nxxxxxxxxxxxxxxxx Preorder xxxxxxxxxxxxxxxxx");
+//      binaryTree.preorderTraversal();
+//      System.out.println("\nxxxxxxxxxxxxxxxx Postorder rxxxxxxxxxxxxxxxxx");
+//      binaryTree.postorderTraversal();
+//      System.out.println("\n");
+//      System.out.println(binaryTree.contains(10));
+      binaryTree.breadthFirst(binaryTree);
 
     }
   }
