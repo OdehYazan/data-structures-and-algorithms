@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="trees.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-17T20:07:17" hostname="LTUCSTUDENT-L08" time="0.047">
+  <properties/>
+  <testcase name="testGetMax()" classname="trees.AppTest" time="0.047"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

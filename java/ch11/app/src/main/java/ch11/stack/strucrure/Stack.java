@@ -49,7 +49,40 @@ public class Stack<T> {
     }
   }
 
-  public boolean isEmpty() {
+  public static boolean validateBrackets(String input) {
+    Stack<Character> stack = new Stack<Character>();
+    char current = '0';
+    for (int i = 0; i < input.length(); i++) {
+      // Saving the char that is currently being looked at for readability
+      current = input.charAt(i);
+
+      // Pushes all (, [ and { chars into the stack
+      if (current == '(' ||
+        current == '[' ||
+        current == '{') {
+        stack.push(current);
+      } else if (current == ')') {
+        if (stack.peek() == null || stack.pop() != '(') {
+          return false;
+        }
+      } else if (current == ']') {
+        if (stack.peek() == null || stack.pop() != '[') {
+          return false;
+        }
+      } else if (current == '}') {
+        if (stack.peek() == null || stack.pop() != '{') {
+          return false;
+        }
+      }
+    }
+
+    // Checks to see if the stack is "empty"
+//    return stack.peek() == null ? false : true;
+    return true;
+  }
+
+
+public boolean isEmpty() {
     return top == null;
   }
 

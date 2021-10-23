@@ -3,12 +3,12 @@
  */
 package ch11;
 
+import ch11.stack.strucrure.Stack;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        Main classUnderTest = new Main();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test void validateBracketsTest() {
+     assertTrue(Stack.validateBrackets("{}"));
     }
 }

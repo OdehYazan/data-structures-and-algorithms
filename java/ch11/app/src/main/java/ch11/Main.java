@@ -26,7 +26,8 @@ public class Main {
 //    System.out.println(animalShelter.dequeue("dog"));
 //
 //    System.out.println(animalShelter.peek());
-  
+    System.out.println(Stack.validateBrackets("{}"));
+
   }
 
 
