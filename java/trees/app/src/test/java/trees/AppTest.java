@@ -4,22 +4,27 @@
 package trees;
 
 import data.BTNode;
+import data.FzBzNode;
 import org.junit.jupiter.api.Test;
 import structure.BinaryTree;
+import structure.FizzBuzzTree;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
   @Test
-  void testBFS() {
-    BinaryTree binaryTree= new BinaryTree();
-    binaryTree.setRoot(new BTNode("Y"));
-    binaryTree.getRoot().setLeft(new BTNode("A"));
-    binaryTree.getRoot().setRight(new BTNode("Z"));
-    binaryTree.getRoot().getLeft().setLeft(new BTNode("A"));
-    binaryTree.getRoot().getLeft().setRight(new BTNode("N"));
+  void testFizzBuzz(){
 
+    FizzBuzzTree fizzBuzzTree = new FizzBuzzTree();
+    FzBzNode root = new FzBzNode("25");
+    FzBzNode node1 = new FzBzNode("15");
+    FzBzNode node2 = new FzBzNode("20");
+    FzBzNode node3 = new FzBzNode("150");
 
-//  assert assertEquals("Y A Z A N ",binaryTree.bfs(),"hello");
+    fizzBuzzTree.root = root;
+    root.subNode.add(node1);
+    root.subNode.add(node2);
+    node1.subNode.add(node3);
+    assertEquals("Buzz FizzBuzz FizzBuzz Buzz ",fizzBuzzTree.fizzBuzz(root));
   }
 }

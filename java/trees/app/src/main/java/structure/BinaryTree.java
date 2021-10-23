@@ -5,7 +5,7 @@ import data.BTNode;
 
 
 
-public class BinaryTree {
+public class BinaryTree<T> {
 
   private BTNode root;
 
@@ -25,14 +25,19 @@ public class BinaryTree {
       BTNode node;
       while (!queue.isEmpty()) {
         node = queue.dequeue();
+
         System.out.print(node.getData() + " ");
+
+
         if (node.getLeft() != null) {
+
           queue.enqueue(node.getLeft());
         }
 
         if (node.getRight() != null) {
           queue.enqueue(node.getRight());
         }
+
       }
     } else {
       System.out.println("Tree empty");

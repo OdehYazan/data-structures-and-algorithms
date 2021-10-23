@@ -1,14 +1,16 @@
-# Breadth-first Traversal.
-**A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.**
+# FizzBuzz
 
 
 ## Challenge
 
-+ **Write a function called breadth first**<br>
-+ **in order**<br>
-+ **Arguments: tree.**<br>
-+ **Return: list of all values in the tree, in the order they were encountered**<br>
++ **Write a function called fizz buzz tree**<br>
++ **Arguments: k-ary tree**<br>
++ **Return: new k-ary tree.**<br>
++ **If the value is divisible by 3, replace the value with “Fizz”**<br>
++ **If the value is divisible by 5, replace the value with “Buzz”**<br>
++ **If the value is divisible by 3 and 5, replace the value with “FizzBuzz”**<br>
++ **If the value is not divisible by 3 or 5, simply turn the number into a String.**<br>
 
 ## Whiteboard
 
-![ch17](./img/ch17.png)
+![ch17](./img/ch18.png)
