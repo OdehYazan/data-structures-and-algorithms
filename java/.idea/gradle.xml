@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/ch10" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../Gradle/gradle-7.2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/ch10" />
+            <option value="$PROJECT_DIR$/ch10/lib" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/ch11" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../Gradle/gradle-7.2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/ch11" />
+            <option value="$PROJECT_DIR$/ch11/app" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/ch5" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../Gradle/gradle-7.2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/ch5" />
+            <option value="$PROJECT_DIR$/ch5/app" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
