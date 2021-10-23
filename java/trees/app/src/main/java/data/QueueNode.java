@@ -1,7 +1,7 @@
-package queue.data;
+package data;
 
 
-  public class QueueNode<T> {
+  public class QueueNode<T>  {
     T data;
     QueueNode next;
 
@@ -17,11 +17,11 @@ package queue.data;
       this.data = data;
     }
 
-    public QueueNode getNext() {
+    public QueueNode<T> getNext() {
       return next;
     }
 
-    public void setNext(QueueNode next) {
+    public void setNext(QueueNode<T> next) {
       this.next = next;
     }
 

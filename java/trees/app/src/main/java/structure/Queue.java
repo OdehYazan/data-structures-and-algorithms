@@ -1,8 +1,8 @@
-package queue.queue;
+package structure;
 
-import queue.data.QueueNode;
+import data.QueueNode;
 
-public class Queue <T>  {
+public class Queue<T> {
   private QueueNode<T> front;
   private QueueNode<T> rear;
 
@@ -29,7 +29,7 @@ public class Queue <T>  {
 
     // remove from the first of the queue using front
     if (isEmpty()) {
-      return (T)"Queue is empty";
+      return (T) "Queue is empty";
     } else {
       T data = front.getData();
       front = front.getNext();
