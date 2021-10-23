@@ -8,11 +8,11 @@ package trees;
 
     public static void main(String[] args) {
       BinaryTree<Integer> binaryTree = new BinaryTree<>();
-      binaryTree.insert(2);
+      binaryTree.insert(9);
       binaryTree.insert(7);
       binaryTree.insert(5);
       binaryTree.insert(2);
-      binaryTree.insert(6);
+      binaryTree.insert(3);
       binaryTree.insert(1);
 
 
@@ -29,7 +29,8 @@ package trees;
 //      binaryTree.postorderTraversal();
 //      System.out.println("\n");
 //      System.out.println(binaryTree.contains(10));
-      binaryTree.breadthFirst(binaryTree);
+//      binaryTree.breadthFirst(binaryTree);
+        binaryTree.oddSum();
 
     }
   }

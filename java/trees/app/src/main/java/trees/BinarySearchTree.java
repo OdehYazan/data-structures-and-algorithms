@@ -6,6 +6,7 @@ import java.util.List;
 public class BinarySearchTree<T extends Comparable<T>> {
 
   private Node<T> root;
+  private Node<Integer> root1;
   private Node<T> leftNode;
   private Node<T> rightNode;
 
@@ -29,7 +30,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
       } else {
         insertHelper(data, root.getLeftNode());
       }
-    } else if(data.compareTo(root.getData()) > 0) {
+    } else if (data.compareTo(root.getData()) > 0) {
       if (root.getRightNode() == null) {
         root.setRightNode(node);
       } else {
@@ -38,23 +39,65 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
   }
 
-  public boolean contains( T data )
-  {
-    return contains( data, root );
+  public boolean contains(T data) {
+    return contains(data, root);
   }
 
-  private boolean contains( T data, Node<T> node )
-  {
-    if( node == null )
+  private boolean contains(T data, Node<T> node) {
+    if (node == null)
       return false;
-    int searchResult = data.compareTo( node.getData() );
-    if( searchResult < 0 )
-      return contains( data, node.getLeftNode() );
-    else if( searchResult > 0 )
-      return contains( data, node.getRightNode() );
+    int searchResult = data.compareTo(node.getData());
+    if (searchResult < 0)
+      return contains(data, node.getLeftNode());
+    else if (searchResult > 0)
+      return contains(data, node.getRightNode());
     else
       return true; // Match
   }
+
+
+  public void oddSum() {
+    if (isEmpty()) {
+      return;
+    }
+
+//    oddSumHelper((Node<Integer>) root);
+
+    System.out.println(oddSumHelper((Node<Integer>) root));
+  }
+
+//  int sum = 0;
+
+//  private void oddSumHelper(Node<Integer> root) {
+//
+//
+//    if (root.getLeftNode() != null) { // traverse left
+//      if ((root.getLeftNode().getData()) % 2 != 0) {
+//        sum += (int) (root.getLeftNode().getData());
+//      }
+//      oddSumHelper(root.getLeftNode());
+//    }
+//
+//
+//    if (root.getRightNode() != null) {
+//      if ((root.getRightNode().getData()) % 2 != 0) {
+//        sum += (root.getRightNode().getData());
+//      }// traverse right
+//      oddSumHelper(root.getRightNode());
+//    }
+public int oddSumHelper(Node<Integer> node) {
+  int sum = 0;
+  if (node != null) {
+    if (node.getData() % 2 != 0) {
+      sum += node.getData();
+    }
+    sum += oddSumHelper(node.getLeftNode());
+    sum += oddSumHelper(node.getRightNode());
+  }
+  return sum;
+
+  }
+
 
 
 
