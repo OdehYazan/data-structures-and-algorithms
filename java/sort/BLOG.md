@@ -33,7 +33,7 @@ will compare the 4 with 8, when it's less than 8, will assign it equal to 8 and 
 
 then assign arr[j+1] the value of temp which is 4.
 
-![1](img/1.PNG)
+![1](../img/1.PNG)
 
 **Pass 2:**
 min=1;
@@ -43,7 +43,7 @@ temp=8;
 
 while temp is == 8  will move to the next iteration.
 
-![2](img/2.PNG)
+![2](../img/2.PNG)
 
 **Pass 3:**
 min=2;
@@ -53,7 +53,7 @@ temp=16;
 
 while temp is grater than 15 will assign 15 to the previous
 
-![3](img/3.PNG)
+![3](../img/3.PNG)
 
 **Pass 4:**
 min=3;
@@ -63,7 +63,7 @@ temp=16;
 
 will temp == 16 keep the same
 
-![4](./img/4.PNG)
+![4](../img/4.PNG)
 
 *
 ## Efficency
