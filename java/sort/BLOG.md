@@ -41,6 +41,7 @@
 ```
 
 ## Trace
+![trace](https://cdn.programiz.com/cdn/farfuture/PRTu8e23Uz212XPrrzN_uqXkVZVY_E0Ta8GZp61-zvw/mtime:1586425911/sites/tutorial2program/files/merge-sort-example_0.png)
 
 [trace](https://www.youtube.com/watch?v=iMT7gTPpaqw)
 ## Efficiency
