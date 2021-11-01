@@ -11,6 +11,7 @@ public class App {
   }
 
   public static void main(String[] args) {
+       MergeSort mergeSort=new MergeSort();
 
     int[] firstArray = {8, 4, 23, 42, 16, 15};
 
@@ -19,6 +20,9 @@ public class App {
     System.out.println("**********************************************************");
 
     System.out.println(Arrays.toString(insertionSort(firstArray)));
+
+    System.out.println(Arrays.toString(MergeSort.mergeSort(firstArray)));
+
   }
 
   public static int[] insertionSort(int[] arr) {

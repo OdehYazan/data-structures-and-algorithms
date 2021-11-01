@@ -5,73 +5,50 @@
 ## Pseudocode
 
 ```java
-  InsertionSort(int[] arr)
+ ALGORITHM Mergesort(arr)
+  DECLARE n <-- arr.length
 
-    FOR i = 1 to arr.length
+  if n > 1
+  DECLARE mid <-- n/2
+  DECLARE left <-- arr[0...mid]
+  DECLARE right <-- arr[mid...n]
+  // sort the left side
+  Mergesort(left)
+  // sort the right side
+  Mergesort(right)
+  // merge the sorted left and right sides together
+  Merge(left, right, arr)
 
-      int j <-- i - 1
-      int temp <-- arr[i]
+  ALGORITHM Merge(left, right, arr)
+  DECLARE i <-- 0
+  DECLARE j <-- 0
+  DECLARE k <-- 0
 
-      WHILE j >= 0 AND temp < arr[j]
-        arr[j + 1] <-- arr[j]
-        j <-- j - 1
+  while i < left.length && j < right.length
+  if left[i] <= right[j]
+  arr[k] <-- left[i]
+  i <-- i + 1
+  else
+  arr[k] <-- right[j]
+  j <-- j + 1
 
-      arr[j + 1] <-- temp
+  k <-- k + 1
+
+  if i = left.length
+  set remaining entries in arr to remaining values in right
+  else
+  set remaining entries in arr to remaining values in left
 ```
 
 ## Trace
 
-Sample Array: [8,4,16,15]
+[trace](https://www.youtube.com/watch?v=iMT7gTPpaqw)
+## Efficiency
 
-**Pass 1:**
-min=0;
-j=1;
+- **Time: `log(n)`:**
 
-temp=4;
+  Time complexity of Merge Sort is `log(n)` as merge sort always divides the array into two halves and takes linear time to merge two halves.
 
-will compare the 4 with 8, when it's less than 8, will assign it equal to 8 and minus 1 from j to become -1 and break the while loop.
+- **Space: `O(n)`:**
 
-then assign arr[j+1] the value of temp which is 4.
-
-![1](img/1.png)
-
-**Pass 2:**
-min=1;
-j=1;
-
-temp=8;
-
-while temp is == 8  will move to the next iteration.
-
-![2](img/2.png)
-
-**Pass 3:**
-min=2;
-j=3;
-
-temp=16;
-
-while temp is grater than 15 will assign 15 to the previous
-
-![3](img/3.png)
-
-**Pass 4:**
-min=3;
-j=4;
-
-temp=16;
-
-will temp == 16 keep the same
-
-![4](img/4.png)
-
-*
-## Efficency
-
-- **Time: `O(n^2)`:**
-
-  The basic operation of this algorithm is comparison. This will happen `n*(n-1)` number of times…concluding the algorithm to be n squared.
-
-- **Space: `O(1)`:**
-
-  No additional space is being created. This array is being sorted in place…keeping the space at constant `O(1)`.
+  additional space is being created. two new arrays the space at constant `O(n)`.

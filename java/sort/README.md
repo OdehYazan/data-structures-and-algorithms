@@ -1,8 +1,8 @@
-# Challenge Summary
-**create method using the Pseudocode to sort array of numbers.**
+# Merge Sort
+**Write a method that takes an array of unsorted intgers array and returns a sorted array using recursive merge sort.**
 
 ## Whiteboard Process
-![ch26](img/ch26.png)<br>
+![ch26](img/ch27.png)<br>
 [Blog](BLOG.md)
 
 ## Approach & Efficiency
