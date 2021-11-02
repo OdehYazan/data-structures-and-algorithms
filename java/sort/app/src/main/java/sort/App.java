@@ -22,6 +22,8 @@ public class App {
     System.out.println(Arrays.toString(insertionSort(firstArray)));
 
     System.out.println(Arrays.toString(MergeSort.mergeSort(firstArray)));
+    System.out.println("**********************************************************");
+    System.out.println(Arrays.toString(QuickSort.quickSort(firstArray)));
 
   }
 

@@ -1,8 +1,8 @@
-# Merge Sort
-**Write a method that takes an array of unsorted intgers array and returns a sorted array using recursive merge sort.**
+# Quick Sort
+**create method that take array of integers using Quick sort algorithm**
 
 ## Whiteboard Process
-![ch26](img/ch27.png)<br>
+![ch26](img/ch28.png)<br>
 [Blog](BLOG.md)
 
 ## Approach & Efficiency
