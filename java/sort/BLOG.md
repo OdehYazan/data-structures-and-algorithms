@@ -38,7 +38,7 @@ ALGORITHM QuickSort(arr, left, right)
 ```
 
 ## Trace
-![trace](img/Quicksort.png)
+![trace](https://cdn.guru99.com/images/1/011019_1052_QuickSortAl2.png)
 [trace Video](https://www.youtube.com/watch?v=Fiot5yuwPAg&list=PLj8W7XIvO93qVnnXxyeWmCSvMFqRBP4Jw&index=5)
 ## Efficiency
 
