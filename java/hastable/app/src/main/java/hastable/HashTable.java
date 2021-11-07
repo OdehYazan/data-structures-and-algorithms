@@ -1,5 +1,9 @@
 package hastable;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
 public class HashTable<T> {
   private int DEFAULT_CAPACITY;
   protected LinkedList[] table;
@@ -55,4 +59,19 @@ public class HashTable<T> {
     }
     return hash % DEFAULT_CAPACITY; // Divides hash by the length of the HashTable's array
   }
+
+  public String repeatedWord(String str){
+  String[] words = str.toLowerCase().split(" ");
+
+    HashSet<String> seenWords = new HashSet<>();
+    for (String word : words) {
+      if (seenWords.contains(word)) {
+        return word;
+      } else {
+        seenWords.add(word);
+      }
+    }
+    return "No repeating words";
+  }
 }
+

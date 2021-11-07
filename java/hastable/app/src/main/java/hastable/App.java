@@ -20,10 +20,12 @@ public class App {
       hashTable.add("Qusai", 1500);
       hashTable.add("Deyaa", 10000);
 
+        String str="Once upon a time, there was a brave princess who...";
       System.out.println("The Integer is => " + hashTable.find("Jade"));
       System.out.println("The index is => " + hashTable.getHash("Morgan"));
       System.out.println("Is contain ? => " + hashTable.contains("abrar"));
       System.out.println("Is contain ? => " + hashTable.contains("Jason"));
-
+      System.out.println(hashTable.repeatedWord(str));
     }
+
 }
