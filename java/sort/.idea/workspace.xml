@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08875b7b-1154-4431-8383-1fe9b06d8f6e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/sort/QuickSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/sort/QuickSortTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Quicksort.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ch28.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gradle/7.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/7.2/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
@@ -18,10 +13,6 @@
       <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/BLOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sort/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sort/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/ch27.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +51,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\STUDENT\401\data-structures-and-algorithms\java\sort\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\STUDENT\401\data-structures-and-algorithms\java\sort\img" />
     </key>
   </component>
