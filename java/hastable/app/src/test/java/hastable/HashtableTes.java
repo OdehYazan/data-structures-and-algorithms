@@ -1,6 +1,12 @@
 package hastable;
 
 import org.junit.jupiter.api.Test;
+import tree.BinaryTree;
+import tree.TreeIntersection;
+import tree.TreeNode;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class HashtableTest {
@@ -99,5 +105,28 @@ class HashtableTest {
     assertEquals("a", hashTable.repeatedWord(testString1));
     assertEquals("it", hashTable.repeatedWord(testString2));
 
+  }
+  @Test
+  void testTreeIntersection() {
+    BinaryTree<Integer> binaryTreeOne = new BinaryTree<>(new TreeNode<>(5));
+    TreeNode<Integer> node1 = new TreeNode<>(2);
+    TreeNode<Integer> node2 = new TreeNode<>(3);
+    TreeNode<Integer> node3 = new TreeNode<>(1, node1, node2);
+    TreeNode<Integer> node5 = new TreeNode<>(6);
+    TreeNode<Integer> node4 = new TreeNode<>(4, node5, null);
+    binaryTreeOne.root.rightChild = node4;
+    binaryTreeOne.root.leftChild = node3;
+
+    BinaryTree<Integer> binaryTreeTwo = new BinaryTree<>(new TreeNode<>(45));
+    TreeNode<Integer> node6 = new TreeNode<>(2);
+    TreeNode<Integer> node7 = new TreeNode<>(12);
+    TreeNode<Integer> node8 = new TreeNode<>(1, node6, node7);
+    TreeNode<Integer> node9 = new TreeNode<>(44);
+    TreeNode<Integer> node10 = new TreeNode<>(4, node9, null);
+    binaryTreeTwo.root.rightChild = node10;
+    binaryTreeTwo.root.leftChild = node8;
+
+
+    assertEquals("[1, 2, 4]", TreeIntersection.treeIntersection(binaryTreeOne, binaryTreeTwo).toString());
   }
 }

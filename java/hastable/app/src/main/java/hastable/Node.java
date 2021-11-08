@@ -5,12 +5,17 @@ public class Node<T> {
   protected T value;
   protected Node next;
 
+  public Node leftChild;
+  public Node rightChild;
+
+
   // Constructor
   public Node(String key, T value) {
     this.key = key;
     this.value = value;
     this.next = null;
   }
+
 
   // Getters and setters
   public String getKey() {

@@ -1,6 +1,4 @@
 # hashmap-repeated-word
-**Write a function called repeated word that finds the first word to occur more than once in a string<br>
-Arguments: string<br>
-Return: string**
+**Write a function that takes in 2 binary trees and return a set of values foundin both trees.**
 
-![img](img/ch31.png)
+![img](img/Capture.PNG)
