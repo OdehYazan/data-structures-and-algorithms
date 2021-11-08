@@ -61,7 +61,10 @@ public class HashTable<T> {
   }
 
   public String repeatedWord(String str){
-  String[] words = str.toLowerCase().split(" ");
+//  String[] words = str.toLowerCase().split(" ");
+    String[] words = str.toLowerCase()
+      .replaceAll("[^a-z ]", "")
+      .split(" ");
 
     HashSet<String> seenWords = new HashSet<>();
     for (String word : words) {

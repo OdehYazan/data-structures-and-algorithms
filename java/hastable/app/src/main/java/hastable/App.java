@@ -25,7 +25,7 @@ public class App {
       System.out.println("The index is => " + hashTable.getHash("Morgan"));
       System.out.println("Is contain ? => " + hashTable.contains("abrar"));
       System.out.println("Is contain ? => " + hashTable.contains("Jason"));
-      System.out.println(hashTable.repeatedWord(str));
+      System.out.println(hashTable.repeatedWord("It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..."));
     }
 
 }
