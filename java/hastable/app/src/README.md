@@ -1,4 +1,5 @@
-# hashmap-repeated-word
-**Write a function that takes in 2 binary trees and return a set of values foundin both trees.**
+# LEFT JOIN
+**Write a method that takes two Hashmaps and left join them
+if the secound hashmap does not have a kesy the returnd value shold be null**
 
-![img](img/Capture.PNG)
+![img](img/ch33.png)

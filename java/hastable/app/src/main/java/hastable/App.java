@@ -9,6 +9,9 @@ import tree.BinaryTree;
 import tree.TreeIntersection;
 import tree.TreeNode;
 
+import java.util.Arrays;
+import java.util.HashMap;
+
 public class App {
 
 
@@ -57,8 +60,27 @@ public class App {
 
     System.out.println(TreeIntersection.treeIntersection(binaryTreeOne, binaryTreeTwo));
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    HashMap<String, String> h1 = new HashMap<>();
+    h1.put("fond", "enamored");
+    h1.put("wrath", "anger");
+    h1.put("diligent", "employed");
+    h1.put("outfit", "garb");
+    h1.put("guide", "usher");
 
+    HashMap<String, String> h2 = new HashMap<>();
+    h2.put("fond", "averse");
+    h2.put("wrath", "delight");
+    h2.put("diligent", "idle");
+    h2.put("guide", "follow");
+    h2.put("flow", "jam");
 
-
+    HashMap<String, String[]> h3 = new HashMap<>();
+    h3 = LeftJoin.leftJoin(h1, h2);
+//    System.out.println(Arrays.toString(h3.get("fond")));
+//    System.out.println(Arrays.toString(h3.get("wrath")));
+//    System.out.println(Arrays.toString(h3.get("fond")));
+//    System.out.println(Arrays.toString(h3.get("fond")));
+//    System.out.println(Arrays.toString(h3.get("fond")));
   }
 }

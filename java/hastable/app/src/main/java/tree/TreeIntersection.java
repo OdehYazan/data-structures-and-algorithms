@@ -18,4 +18,9 @@ public class TreeIntersection<V> {
     }
     return arr;
   }
+
+  @Override
+  public String toString() {
+    return super.toString();
+  }
 }
