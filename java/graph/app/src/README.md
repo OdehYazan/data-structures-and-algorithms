@@ -8,6 +8,7 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 * GetNodes() - Returns all of the nodes in the graph as a collection (set, list, or similar)
 * GetNeighbors() - Returns a collection of nodes connected to the given node, include the weight of the connection in the returned collection
 * Size() - Returns the total number of nodes in the graph
+* breadthFirst(value) - Returns array of the BFS order
 
 ## Approach & Efficiency
 
@@ -16,5 +17,6 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 * getNodes: O(n) space and time
 * getNeighbors: O(n) space and time
 * size: O(1) space O(n) time
+*breadthFirst(value) space O(1) time O(n^2)
 
-
+![img](img/ch36.png)

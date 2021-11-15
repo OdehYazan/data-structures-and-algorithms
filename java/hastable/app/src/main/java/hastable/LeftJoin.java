@@ -3,6 +3,7 @@ package hastable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 public class LeftJoin {
 
@@ -21,6 +22,35 @@ public class LeftJoin {
 
     }
     return result;
+  }
+  public static void FrequentWord(String array[])
+  {
+    Map<String,Integer> hshmap = new HashMap<String, Integer>();
+    for (String str : array)
+    {
+      if (hshmap.keySet().contains(str))
+        hshmap.put(str, hshmap.get(str) + 1);
+      else
+        hshmap.put(str, 1);
+    }
+    String maxStr = "";
+    int maxVal = 0;
+    for (Map.Entry<String,Integer> entry : hshmap.entrySet())
+    {
+      String key = entry.getKey();
+      Integer count = entry.getValue();
+      if (count > maxVal)
+      {
+        maxVal = count;
+        maxStr = key;
+      }
+      else if (count == maxVal){
+        if (key.length() < maxStr.length())
+          maxStr = key;
+      }
+    }
+    System.out.println("Most frequent word: "+ maxStr);
+    System.out.println("Count: "+ maxVal);
   }
 
   @Override
