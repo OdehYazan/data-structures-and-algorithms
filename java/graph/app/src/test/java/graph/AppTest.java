@@ -17,14 +17,36 @@ class AppTest {
     graph.addNode("7");
     graph.addNode("6");
 
-    graph.addEdge("10", "1");
-    graph.addEdge("1", "5");
-    graph.addEdge("7", "10");
-    graph.addEdge("4", "5");
-    graph.addEdge("4", "6");
-    graph.addEdge("7", "6");
+
 
     assertEquals("[6, 4, 7, 5, 10, 1]", graph.breadthFirst("6").toString());
+
+  }
+
+  @Test
+  public void businessTripTest(){
+    Graph graph = new Graph();
+    graph.addNode("Pandora");
+    graph.addNode("Arendelle");
+    graph.addNode("Metroville");
+    graph.addNode("Monstropolis");
+    graph.addNode("Narnia");
+    graph.addNode("Naboo");
+
+    graph.addEdge("Pandora" , "Arendelle",150);
+    graph.addEdge("Pandora" , "Metroville",82);
+    graph.addEdge("Metroville" , "Arendelle",99);
+    graph.addEdge("Metroville" , "Narnia",37);
+    graph.addEdge("Metroville" , "Naboo",26);
+    graph.addEdge("Metroville" , "Monstropolis",105);
+    graph.addEdge("Narnia" , "Naboo",250);
+    graph.addEdge("Monstropolis" , "Naboo",73);
+    graph.addEdge("Monstropolis" , "Arendelle",42);
+
+    String[] trip = {"Metroville" , "Pandora"};
+
+
+    assertEquals("true, $82",graph.businessTrip("Metroville",trip).toString());
 
   }
 }
