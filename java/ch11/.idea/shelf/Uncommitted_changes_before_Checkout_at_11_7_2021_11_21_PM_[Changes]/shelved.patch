@@ -1,0 +1,45 @@
+Index: ../hastable/.idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleHome\" value=\"$PROJECT_DIR$/../../../../../../Gradle/gradle-7.2\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../hastable/.idea/gradle.xml b/../hastable/.idea/gradle.xml
+--- a/../hastable/.idea/gradle.xml	
++++ b/../hastable/.idea/gradle.xml	
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+Index: ../hastable/app/src/main/java/hastable/HashTable.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package hastable;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.HashSet;\r\nimport java.util.List;\r\n\r\npublic class HashTable<T> {\r\n  private int DEFAULT_CAPACITY;\r\n  protected LinkedList[] table;\r\n\r\n  // Constructor if the user wants to use the hard-coded default capacity\r\n  public HashTable() {\r\n    this.DEFAULT_CAPACITY = 10;\r\n    this.table = new LinkedList[DEFAULT_CAPACITY];\r\n\r\n    // Adds a LinkedList to each index of the HashTable array upon instantiation\r\n    HashTable.addLinkedListsToTable(this.table);\r\n  }\r\n\r\n  // Constructor if the user wants to specify their own default capacity\r\n  public HashTable(int DEFAULT_CAPACITY) {\r\n    this.DEFAULT_CAPACITY = DEFAULT_CAPACITY;\r\n    this.table = new LinkedList[DEFAULT_CAPACITY];\r\n\r\n    // Adds a LinkedList to each index of the HashTable array upon instantiation\r\n    HashTable.addLinkedListsToTable(this.table);\r\n  }\r\n\r\n  // Adds a LinkedList to each index of the HashTable array\r\n  protected static void addLinkedListsToTable(LinkedList[] table) {\r\n    for (int i = 0; i < table.length; i++) {\r\n      table[i] = new LinkedList();\r\n    }\r\n  }\r\n\r\n  // Adds a node containing a key/value pair to the HashTable\r\n  public void add(String key, T value) {\r\n    int hashedKey = this.getHash(key);\r\n    this.table[hashedKey].append(key, value);\r\n  }\r\n\r\n  // Takes in the key and returns the value from key/value pair\r\n  public T find(String key) {\r\n    int hashedKey = this.getHash(key);\r\n    return (T) this.table[hashedKey].findValue(key);\r\n  }\r\n\r\n  // Returns true if the input key exists in the HashTable\r\n  public boolean contains(String key) {\r\n    int hashedKey = this.getHash(key);\r\n    return this.table[hashedKey].includes(key);\r\n  }\r\n\r\n  // Hashes the key\r\n  protected int getHash(String key) {\r\n    int hash = 0;\r\n    for (int i = 0; i < key.length(); i++) {\r\n      hash += key.charAt(i); // Adds the ASCII value of the current character to hash\r\n    }\r\n    return hash % DEFAULT_CAPACITY; // Divides hash by the length of the HashTable's array\r\n  }\r\n\r\n  public String repeatedWord(String str){\r\n  String[] words = str.toLowerCase().split(\" \");\r\n\r\n    HashSet<String> seenWords = new HashSet<>();\r\n    for (String word : words) {\r\n      if (seenWords.contains(word)) {\r\n        return word;\r\n      } else {\r\n        seenWords.add(word);\r\n      }\r\n    }\r\n    return \"No repeating words\";\r\n  }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../hastable/app/src/main/java/hastable/HashTable.java b/../hastable/app/src/main/java/hastable/HashTable.java
+--- a/../hastable/app/src/main/java/hastable/HashTable.java	
++++ b/../hastable/app/src/main/java/hastable/HashTable.java	
+@@ -62,13 +62,13 @@
+ 
+   public String repeatedWord(String str){
+   String[] words = str.toLowerCase().split(" ");
+-
+-    HashSet<String> seenWords = new HashSet<>();
++          int i =0;
++    HashTable hashTable= new HashTable();
+     for (String word : words) {
+-      if (seenWords.contains(word)) {
++      if (hashTable.contains(word)) {
+         return word;
+       } else {
+-        seenWords.add(word);
++        hashTable.add(word,i++);
+       }
+     }
+     return "No repeating words";
