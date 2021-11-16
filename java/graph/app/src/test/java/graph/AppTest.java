@@ -49,4 +49,29 @@ class AppTest {
     assertEquals("true, $82",graph.businessTrip("Metroville",trip).toString());
 
   }
+
+  @Test
+  public void depthTest(){
+    Graph graph = new Graph();
+    graph.addNode("Pandora");
+    graph.addNode("Arendelle");
+    graph.addNode("Metroville");
+    graph.addNode("Monstropolis");
+    graph.addNode("Narnia");
+    graph.addNode("Naboo");
+
+    graph.addEdge("Pandora" , "Arendelle",150);
+    graph.addEdge("Pandora" , "Metroville",82);
+    graph.addEdge("Metroville" , "Arendelle",99);
+    graph.addEdge("Metroville" , "Narnia",37);
+    graph.addEdge("Metroville" , "Naboo",26);
+    graph.addEdge("Metroville" , "Monstropolis",105);
+    graph.addEdge("Narnia" , "Naboo",250);
+    graph.addEdge("Monstropolis" , "Naboo",73);
+    graph.addEdge("Monstropolis" , "Arendelle",42);
+
+
+    assertEquals("[Pandora, Metroville, Monstropolis, Arendelle, Naboo, Narnia]",graph.depthFirst("Pandora").toString());
+
+  }
 }

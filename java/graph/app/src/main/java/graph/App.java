@@ -46,6 +46,10 @@ public class App {
     System.out.println(graph.businessTrip("Naboo",trip3));
     System.out.println(graph.businessTrip("Narnia",trip4));
 
+    System.out.println(graph.depthFirst("Pandora"));
+    System.out.println(graph.depthFirst("Narnia"));
+    System.out.println(graph.depthFirst("Naboo"));
+
 
 
   }
